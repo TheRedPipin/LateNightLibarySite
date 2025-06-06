@@ -477,3 +477,25 @@ body::before {
   60% { filter: brightness(1.2); }
   80% { filter: brightness(0.8); }
 }
+
+.donation-section {
+  background: rgba(26, 16, 43, 0.85);;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(108, 62, 182, 0.15);
+  padding: 1.5rem 1.5rem;
+  color: var(--yellow);
+  display: grid;
+  grid-gap: 1rem;
+} 
+
+.donation-section button {
+  background: var(--purple);
+  color: var(--yellow);
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
