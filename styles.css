@@ -190,6 +190,7 @@ footer .footer-meta {
 
 @media (max-width: 600px) {
   main {
+    background-color: #7f4ba488;
     padding: 1rem 0.5rem;
     max-width: 98vw;
   }
