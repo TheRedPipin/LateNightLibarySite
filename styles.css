@@ -22,11 +22,17 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg, var(--purple) 60%, var(--dark-purple) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--purple) 0%,
+    var(--dark-purple) 60%,
+    rgba(42, 23, 69, 0.0) 100%
+  );
   color: var(--yellow);
-  padding: 2rem 0 1rem 0;
+  padding: 3rem 0 2rem 0;
   text-align: center;
   box-shadow: 0 2px 8px rgba(42, 23, 69, 0.2);
+  transition: background 0.7s;
 }
 
 header h1 {
@@ -120,14 +126,55 @@ footer {
   background: var(--dark-purple);
   color: var(--yellow);
   text-align: center;
-  padding: 1rem 0;
-  font-size: 1rem;
+  padding: 2rem 0 1.2rem 0;
+  font-size: 1.05rem;
   letter-spacing: 1px;
   margin-top: auto;
   box-shadow: 0 -2px 8px rgba(42, 23, 69, 0.2);
-  position: sticky;
-  bottom: 0;
   width: 100%;
+  border-top: 3px solid var(--purple);
+  position: static; /* Changed from sticky to static */
+}
+
+footer p {
+  margin: 0.5em 0;
+  line-height: 1.7;
+}
+
+footer a {
+  color: var(--yellow);
+  background: var(--purple);
+  padding: 0.18em 0.55em;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 0.15em;
+  box-shadow: 0 1px 4px rgba(42, 23, 69, 0.13);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+footer a:hover,
+footer a:focus {
+  background: var(--yellow);
+  color: var(--dark-purple);
+  outline: none;
+  text-decoration: underline;
+  box-shadow: 0 2px 8px rgba(127, 75, 164, 0.25);
+}
+
+footer .footer-social {
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+
+footer .footer-meta {
+  font-size: 0.95em;
+  color: var(--white);
+  opacity: 0.7;
+  margin-top: 0.7em;
 }
 
 .site-logo {
@@ -135,8 +182,6 @@ footer {
   margin: 0 auto 1rem auto;
   width: 360px;
   max-width: 80vw;
-  box-shadow: 0 4px 24px rgba(42, 23, 69, 0.25);
-  background: var(--purple);
 }
 
 @media (max-width: 600px) {
@@ -170,8 +215,12 @@ footer {
     padding: 0.4rem 0.5rem;
   }
   footer {
-    font-size: 0.95rem;
-    padding: 0.7rem 0;
+    font-size: 0.98rem;
+    padding: 1.2rem 0 0.7rem 0;
+  }
+  footer a {
+    font-size: 1em;
+    padding: 0.15em 0.4em;
   }
 }
 
@@ -363,4 +412,70 @@ footer {
     color: var(--white);
     outline: none;
   }
+}
+
+.intro a,
+.features a {
+  color: var(--yellow);
+  background: var(--purple);
+  padding: 5px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 1px 4px rgba(42, 23, 69, 0.13);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.intro a:hover,
+.features a:hover,
+.intro a:focus,
+.features a:focus {
+  background: var(--dark-purple);
+  color: var(--white);
+  outline: none;
+  text-decoration: underline;
+  box-shadow: 0 2px 8px rgba(127, 75, 164, 0.25);
+}
+
+/* Starry background effect with blinking stars */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, #fffbea 1.2px, transparent 1.2px) 10vw 20vh / 120px 120px,
+    radial-gradient(circle, #fffbea 1.1px, transparent 1.1px) 60vw 80vh / 140px 140px,
+    radial-gradient(circle, #fffbea 1.4px, transparent 1.4px) 80vw 10vh / 160px 160px,
+    radial-gradient(circle, #fffbea 0.8px, transparent 0.8px) 30vw 60vh / 100px 100px,
+    radial-gradient(circle, #fffbea 0.9px, transparent 0.9px) 70vw 40vh / 110px 110px,
+    radial-gradient(circle, #fffbea 0.5px, transparent 0.5px) 50vw 30vh / 90px 90px,
+    radial-gradient(circle, #fffbea 0.6px, transparent 0.6px) 20vw 70vh / 80px 80px,
+    radial-gradient(circle, #fffbea 0.7px, transparent 0.7px) 90vw 50vh / 70px 70px,
+    radial-gradient(circle, #fffbea 0.6px, transparent 0.6px) 40vw 10vh / 200px 200px,
+    radial-gradient(circle, #fffbea 0.5px, transparent 0.5px) 10vw 90vh / 180px 180px;
+  background-repeat: repeat;
+  opacity: 0.7;
+  animation: twinkle 3s infinite steps(2, end), blinkStars 4s infinite steps(2, end) alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+@keyframes blinkStars {
+  0%, 100% { filter: brightness(1); }
+  20% { filter: brightness(1.5); }
+  40% { filter: brightness(0.7); }
+  60% { filter: brightness(1.2); }
+  80% { filter: brightness(0.8); }
+}
+
+/* Ensure content is above the stars */
+body, main, header, footer {
+  position: relative;
+  z-index: 1;
 }
