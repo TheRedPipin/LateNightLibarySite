@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
     if (navOverlay) navOverlay.classList.remove('show');
+    document.body.classList.remove('nav-open'); // Disable scroll removal
   }
 
   if (hamburger && navUl) {
@@ -22,10 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
           navOverlay.classList.remove('show');
         }
       }
+      if (isOpen) {
+        document.body.classList.add('nav-open'); // Disable scroll
+      } else {
+        document.body.classList.remove('nav-open');
+      }
     });
-  }
-
-  if (navOverlay) {
-    navOverlay.addEventListener('click', closeMenu);
   }
 });

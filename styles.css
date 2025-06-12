@@ -21,6 +21,11 @@ body {
   color: var(--yellow);
 }
 
+body.nav-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
 header {
   background: linear-gradient(
     180deg,
