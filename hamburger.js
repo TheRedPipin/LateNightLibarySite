@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
     if (navOverlay) navOverlay.classList.remove('show');
-    document.body.classList.remove('nav-open'); // Disable scroll removal
+    document.body.classList.remove('nav-open');
   }
 
   if (hamburger && navUl) {
@@ -24,10 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
       if (isOpen) {
-        document.body.classList.add('nav-open'); // Disable scroll
+        document.body.classList.add('nav-open');
       } else {
         document.body.classList.remove('nav-open');
       }
     });
+  }
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMenu);
   }
 });
