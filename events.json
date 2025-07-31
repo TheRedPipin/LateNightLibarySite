@@ -1,9 +1,12 @@
 [
   {
-    "Event Name": "Example Event",
-    "Date": "01/01/2000",
-    "Place": "Exampltopia",
-    "Type": "Example",
-    "Description": "This is a silly billy event to test the events.json file so india infinite independant."
+    "Event Name": "Summer frottage walk",
+    "Date": "25th of August",
+    "Time": "6pm - 7pm",
+    "Place": "Dover, Market Square (Unde the Big Rings)",
+    "Description": "
+    Join us under the Big Rings in Dover Market Square for a free Summer Frottage Walk with The Late Night Library CIC, 
+    where we’ll explore the town’s hidden textures by making rubbings of benches, bricks, and other overlooked surfaces. 
+    Pencils and sketchbooks provided!"
   }
 ]
