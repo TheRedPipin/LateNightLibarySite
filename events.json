@@ -16,5 +16,14 @@
     "Description": "It’s a hoedown throw down, best dressed wins a prize!",
     "Cost": "£12 per person, booking required",
     "Booking Link": "example.com/book-summer-frottage"
-  }
+  },
+  {
+  "Event Name": "Photography Workshop with Dirk Seyfried",
+  "Date": "18th of August",
+  "Time": "6pm - 7pm",
+  "Place": "Dover seafront, Marine Parade, CT16 1LW (Outside Rebels Coffee Shop)",
+  "Description": "Learn the basics of urban photography with, local photography expert, Dirk Seyfried. Cameras can be provided for those without one.",
+  "Cost": "£12 per person",
+  "Booking Link": "example.com/book-photography-dirk"
+ }
 ]
