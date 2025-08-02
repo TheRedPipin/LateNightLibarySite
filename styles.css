@@ -339,6 +339,10 @@ body.show-fold-hint .fold-hint {
   box-shadow: 0 1px 4px rgba(42, 23, 69, 0.10);
 }
 
+.event-details p {
+  color: var(--yellow);
+}
+
 .features form {
   display: flex;
   flex-direction: column;
@@ -383,7 +387,7 @@ body.show-fold-hint .fold-hint {
   padding: 0.7rem 1.2rem;
   font-size: 1.1rem;
   font-weight: bold;
-  cursor: not-allowed;
+  cursor: grab;
   opacity: 0.7;
   margin-top: 0.5rem;
   transition: background 0.2s, color 0.2s;
@@ -657,4 +661,21 @@ main.folded + .cat-reveal,
   .nav-overlay {
     display: none !important;
   }
+}
+
+.booking-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #1e73be;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.booking-button:hover {
+  background-color: #155d91;
 }

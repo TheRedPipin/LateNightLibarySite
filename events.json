@@ -3,7 +3,18 @@
     "Event Name": "Summer frottage walk",
     "Date": "25th of August",
     "Time": "6pm - 7pm",
-    "Place": "Dover, Market Square (Unde the Big Rings)",
-    "Description": "Join us under the Big Rings in Dover Market Square for a free Summer Frottage Walk with The Late Night Library CIC, where we’ll explore the town’s hidden textures by making rubbings of benches, bricks, and other overlooked surfaces. Pencils and sketchbooks provided!"
+    "Place": "Dover, Market Square (Under the Big Rings)",
+    "Description": "Join us for this free Summer Frottage Walk where we’ll explore the town’s hidden textures by making rubbings of benches, bricks, and other overlooked surfaces. Pencils and sketchbooks provided!",
+    "Cost": "FREE!!!!!",
+    "Booking Link": "example.com/book-summer-frottage"
+  },
+  {
+    "Event Name": "Line Dance Workshop with Loren Fuell",
+    "Date": "31st of August",
+    "Time": "1pm - 2pm",
+    "Place": "Inspire Fitness Studio, London Road, Dover, CT17 0SH",
+    "Description": "It’s a hoedown throw down, best dressed wins a prize!",
+    "Cost": "£12 per person, booking required",
+    "Booking Link": "example.com/book-summer-frottage"
   }
 ]

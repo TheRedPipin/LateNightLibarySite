@@ -39,24 +39,42 @@
     <div id="events-container"></div>
     <script>
       fetch('events.json')
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
         .then(events => {
           const container = document.getElementById('events-container');
+          if (!container) return;
+
           events.forEach(event => {
             const card = document.createElement('section');
             card.className = 'event-card';
+
             card.innerHTML = `
               <h3>${event["Event Name"]}</h3>
               <div class="event-details">
                 <span><strong>When:</strong> ${event.Date}</span><br><br>
                 <span><strong>Time:</strong> ${event.Time}</span><br><br>
-                <span><strong>Place:</strong> ${event.Place}</span>
+                <span><strong>Place:</strong> ${event.Place}</span><br><br>
+                <span><strong>Cost:</strong> ${event.Cost}</span>
+                <p><strong>${event.Description}</strong></p>
+                ${event["Booking Link"] ? `<a href="${event["Booking Link"]}" target="_blank" rel="noopener" class="booking-button">Book Now</a>` : ''}
               </div>
-              <p>${event.Description}</p>
             `;
+
             container.appendChild(card);
           });
-        });
+        })
+        .catch(error => {
+          console.error("Failed to load events:", error);
+          const container = document.getElementById('events-container');
+          if (container) {
+            container.innerHTML = `<p>Sorry, we couldn’t load the events right now. Please check back later.</p>`;
+          }
+      });
     </script>
   </main>
   <footer>
