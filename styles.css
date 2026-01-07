@@ -145,7 +145,6 @@ h2, h3 {
 .features li {
   margin-bottom: 0.7rem;
   font-size: 1.05rem;
-  border-left: 4px solid var(--yellow);
 }
 
 footer {
