@@ -166,6 +166,16 @@ footer p {
   line-height: 1.7;
 }
 
+footer .socialLink {
+  height: 20px;
+  width: 20px;
+  align-items: center;
+}
+
+footer .socialLink img {
+  width: 20px;
+}
+
 footer a {
   color: var(--yellow);
   background: var(--purple);
